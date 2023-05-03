@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1{
+ 
+  display: inline-flexf;
+  font-family: "impact", sans-serif;
+  background: url(https://images.pexels.com/photos/1704120/pexels-photo-1704120.jpeg?cs=srgb&dl=pexels-steve-johnson-1704120.jpg&fm=jpg);
+  font-size: 5rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #5b728a54;
+  animation: move 40s linear infinite;
+  letter-spacing: 3rem;
+  margin:0;
+  padding: 0.5rem;
+  border-bottom: 2px solid;
+ }
+ @keyframes move {
+  from { background-position: 0 80%;}
+  to { background-position: 100% 50%;}
+ }
+
+.header
+{
+  background-color: rgba(219, 208, 208, 0.644);
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.draw
+{
+  height: 100%;
+  position: absolute;
+  right:0;
+  top: 0;
+  width: 30%;
+  border: 2px solid;
+  margin: auto;
+  transition: 1s;
+  background-color:whitesmoke;
+}
+.nodraw
+{
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  border: 2px solid;
+  margin: auto;
+  transition: 1s;
+  background-color:whitesmoke;
+}
+.flex
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+.none
+{
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.leftarrow
+{
+  font-size: 2rem;
+  cursor: pointer;
+}
+.AddComponent
+{
+  text-align: center;
+  padding: 1rem 0;
 }
