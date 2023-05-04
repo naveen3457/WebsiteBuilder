@@ -8,7 +8,9 @@ function App() {
 
   const dispatch = useDispatch();
 
-  // const selectedComp = useSelector((state) => state.getComponent.value)
+  // const selectedComp = useSelector((state) => state.getComponent.value);
+  // console.log(selectedComp);
+  // const [SelectedComponent, setComponent] = useState("");
 
   const [show, setShow] = useState(false);
 
@@ -36,7 +38,7 @@ function App() {
 
       <div className={show ? "draw" : "nodraw"}>
         <div style={{ position: "relative", marginLeft: "-1rem" }}>
-          <div className="leftarrow" onClick={toggleShow}>{show ? "X" : "<"}</div>
+          <div className="leftarrow" onClick={toggleShow}>{show ? "X":"<"}</div>
         </div>
 
         <div>{TitleContent.map((e) => {
