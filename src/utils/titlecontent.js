@@ -1,4 +1,4 @@
-export const TitleContent = [
+ const TitleContent = [
     {Title:"Title"},
     {Title:"Image"},
     {Title:"Description"},
@@ -10,3 +10,5 @@ export const TitleContent = [
     {Title:"Icon"},
     {Title:"Date"},
 ]
+
+export default TitleContent;

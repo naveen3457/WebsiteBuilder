@@ -1,7 +1,7 @@
 import './App.css';
 import { useDispatch, useSelector} from 'react-redux';
 import { useState } from "react";
-import {TitleContent} from "./utils/titlecontent";
+import TitleContent from "./utils/titlecontent";
 import  GetComponentSlice from "./redux/slice/getcomponentsslice";
 
 function App() {
@@ -32,21 +32,21 @@ function App() {
     <div className="App">
       <div className='header'>
 
-          <h1>WEBSITE BUILDER</h1>
+          <h1 onClick={toggleShow}>WEBSITE BUILDER</h1>
       </div>
 
 
       <div className={show ? "draw" : "nodraw"}>
         <div style={{ position: "relative", marginLeft: "-1rem" }}>
-          <div className="leftarrow" onClick={toggleShow}>{show ? "X":"<"}</div>
+          <div className="leftarrow" onClick={toggleShow}>{show ? "X":""}</div>
         </div>
 
         <div>{TitleContent.map((e) => {
-
-          <div className={!show ?"flex":"none"}>
-            {/* <div onClick={(f) => clickMeOnTitle(f)} name={e.Title}>{e.Title}</div> */}
-            <div>+</div>
-          </div>
+          return (
+            <div>
+              <div className='title-container'>{e.Title}<div>+</div></div>    
+            </div>
+          )
         })}
         </div>
 
